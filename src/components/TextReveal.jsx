@@ -2,7 +2,7 @@
 
 import gsap, { ScrollTrigger, SplitText } from "@/libs/gsap"
 import { useGSAP } from "@gsap/react"
-import { forwardRef, useRef } from "react"
+import { forwardRef, useImperativeHandle, useRef } from "react"
 
 const TextReveal = forwardRef((
     {
@@ -20,6 +20,12 @@ const TextReveal = forwardRef((
   const wrapperRef = useRef(null)
   const splitRef = useRef(null)
   const tlRef = useRef(null)
+
+  useImperativeHandle(ref, () => ({
+    play: () => tlRef.current?.play(),
+    reverse: () => tlRef.current?.reverse(),  
+    reset: () => tlRef.current?.pause(0)
+  }))
 
   useGSAP(() => {
     splitRef.current = new SplitText(wrapperRef.current, { 
