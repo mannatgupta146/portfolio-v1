@@ -6,7 +6,7 @@ import gsap from "@/libs/gsap"
 
 const CARD_W = 300
 const CARD_H = 300
-const HOVER_SCALE = 1.35
+const HOVER_SCALE = 1.25
 
 const CarouselCard = ({ project, onHoverStart, onHoverEnd }) => {
   const cardRef = useRef(null)
@@ -64,7 +64,7 @@ const CarouselCard = ({ project, onHoverStart, onHoverEnd }) => {
         style={{ bottom: "calc(100% + 3rem)" }}
       >
         <TextReveal ref={numberRef} trigger="manual" splitBy="chars">
-          <h3 className="text-2xl font-bold">{project.number}</h3>
+          <h3 className="text-sm">{project.number}</h3>
         </TextReveal>
 
         <TextReveal ref={titleRef} trigger="manual" splitBy="words">

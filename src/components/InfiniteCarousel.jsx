@@ -6,8 +6,8 @@ import gsap from "@/libs/gsap"
 
 const CARD_W = 300
 const CARD_H = 300
-const HOVER_SCALE = 1.35
-const CARD_GAP = 20
+const HOVER_SCALE = 1.25
+const CARD_GAP = 30
 
 const DURATION = 25
 
@@ -43,8 +43,8 @@ const InfiniteCarousel = ({ projects }) => {
     <div
       className="overflow-hidden w-full"
       style={{
-        paddingTop: `${(CARD_H)}px`,
-        paddingBottom: `${(CARD_H) / 2}px`,
+        paddingTop: `${(CARD_H) / 2}px`,
+        paddingBottom: `${(CARD_H - TRACK_H) / 2}px`,
       }}
     >
       <div
