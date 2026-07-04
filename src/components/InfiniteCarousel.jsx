@@ -43,8 +43,8 @@ const InfiniteCarousel = ({ projects }) => {
     <div
       className="overflow-hidden w-full"
       style={{
-        paddingTop: `${(TRACK_H - CARD_H) / 2}px`,
-        paddingBottom: `${(TRACK_H - CARD_H) / 2}px`,
+        paddingTop: `${(CARD_H)}px`,
+        paddingBottom: `${(CARD_H) / 2}px`,
       }}
     >
       <div
