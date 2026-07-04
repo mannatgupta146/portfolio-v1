@@ -5,7 +5,7 @@ import CarouselCard from "./CarouselCard"
 import gsap from "@/libs/gsap"
 
 const CARD_W = 300
-const CARD_H = 300
+const CARD_H = 360
 const HOVER_SCALE = 1.25
 const CARD_GAP = 30
 

@@ -5,8 +5,8 @@ import TextReveal from "./TextReveal"
 import gsap from "@/libs/gsap"
 
 const CARD_W = 300
-const CARD_H = 300
-const HOVER_SCALE = 1.25
+const CARD_H = 360
+const SCALE = 1.25
 
 const CarouselCard = ({ project, onHoverStart, onHoverEnd }) => {
   const cardRef = useRef(null)
@@ -19,7 +19,8 @@ const CarouselCard = ({ project, onHoverStart, onHoverEnd }) => {
     gsap.killTweensOf(cardRef.current)
 
     gsap.to(cardRef.current, {
-      scale: HOVER_SCALE,
+      width: CARD_W * SCALE,
+      height: CARD_H * SCALE,
       duration: 0.5,
       ease: "power3.out",
       zIndex: 10,
@@ -36,7 +37,8 @@ const CarouselCard = ({ project, onHoverStart, onHoverEnd }) => {
     gsap.killTweensOf(cardRef.current)
 
     gsap.to(cardRef.current, {
-      scale: 1,
+      width: CARD_W,
+      height: CARD_H,
       duration: 0.3,
       ease: "power3.out",
       zIndex: 1,
@@ -73,7 +75,7 @@ const CarouselCard = ({ project, onHoverStart, onHoverEnd }) => {
       </div>
 
       {/* Image */}
-      <div className="w-full h-full overflow-hidden">
+      <div className="w-full h-full overflow-hidden rounded-sm">
         <img
           src={project.coverImage}
           alt={project.title}
