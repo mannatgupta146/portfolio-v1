@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 import SmoothScroller from "@/components/SmoothScroller";
 
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable}  h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        <Navbar />
         <SmoothScroller>{children}</SmoothScroller>
       </body>
     </html>
