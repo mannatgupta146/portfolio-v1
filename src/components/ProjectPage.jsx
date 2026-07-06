@@ -149,7 +149,7 @@ const ProjectPage = ({ project, nextProject, prevProject }) => {
   }
 
   return (
-    <main ref={containerRef}>
+    <main ref={containerRef} className="lg:pt-8">
       <section className="min-h-screen w-full lg:h-screen">
         <div className="flex h-full w-full flex-col gap-8 px-4 pb-8 pt-10 sm:px-6 lg:flex-row lg:gap-0 lg:px-8 lg:pb-3 lg:pt-16">
           <div className="firstSegment h-auto w-full lg:h-full lg:w-[5%]">
@@ -255,7 +255,7 @@ const ProjectPage = ({ project, nextProject, prevProject }) => {
       {project.gallery.map((image, index) => (
         <section
           key={index}
-          className="gallery-section h-[80vh] w-full overflow-hidden sm:h-screen"
+          className="gallery-section h-[90vh] w-full overflow-hidden sm:h-screen"
         >
           <div
             style={{
