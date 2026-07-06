@@ -53,7 +53,7 @@ const CarouselCard = ({ project, onHoverStart, onHoverEnd }) => {
   const { navigateTo } = useViewTransition()
 
   const handleClick = () => {
-    navigateTo(`/projects/${project.slug}`)
+    navigateTo(`/project/${project.slug}`)
   }
 
   return (
